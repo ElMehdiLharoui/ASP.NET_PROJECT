@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -10,16 +11,16 @@ using WebApplication1.MODELS;
 
 namespace WebApplication1.Pages.etudiants
 {
-    public class DeleteModel : PageModel
+    [Authorize]
+    public class DetailsModel : PageModel
     {
         private readonly WebApplication1.DataContext1.DataContext _context;
 
-        public DeleteModel(WebApplication1.DataContext1.DataContext context)
+        public DetailsModel(WebApplication1.DataContext1.DataContext context)
         {
             _context = context;
         }
 
-        [BindProperty]
         public Etudiant Etudiant { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
@@ -36,24 +37,6 @@ namespace WebApplication1.Pages.etudiants
                 return NotFound();
             }
             return Page();
-        }
-
-        public async Task<IActionResult> OnPostAsync(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            Etudiant = await _context.etudiants.FindAsync(id);
-
-            if (Etudiant != null)
-            {
-                _context.etudiants.Remove(Etudiant);
-                await _context.SaveChangesAsync();
-            }
-
-            return RedirectToPage("./Index");
         }
     }
 }

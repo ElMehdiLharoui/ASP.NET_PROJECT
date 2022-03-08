@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,6 +11,7 @@ using WebApplication1.MODELS;
 
 namespace WebApplication1.Pages.etudiants
 {
+    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly WebApplication1.DataContext1.DataContext _context;

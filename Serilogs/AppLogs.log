@@ -1,0 +1,66 @@
+2022-03-08 21:55:06.624 +01:00 [WRN] test
+2022-03-08 21:58:00.060 +01:00 [INF] Entity Framework Core 5.0.14 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2022-03-08 21:58:00.263 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-03-08 21:58:00.330 +01:00 [INF] User profile is available. Using 'C:\Users\ElMehdi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-03-08 21:58:00.631 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-08 21:58:00.631 +01:00 [INF] Hosting environment: Development
+2022-03-08 21:58:00.641 +01:00 [INF] Content root path: C:\Users\ElMehdi\source\repos\WebApplication1
+2022-03-08 21:58:00.678 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44386/ - -
+2022-03-08 21:58:00.736 +01:00 [INF] Executing endpoint '/Index'
+2022-03-08 21:58:00.792 +01:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2022-03-08 21:58:00.802 +01:00 [INF] Executing handler method WebApplication1.Pages.IndexModel.OnGet - ModelState is "Valid"
+2022-03-08 21:58:00.805 +01:00 [INF] Entity Framework Core 5.0.14 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2022-03-08 21:58:00.971 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?', @p1='?' (Size = 2), @p2='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "etudiants" ("age", "nom", "prenom")
+VALUES (@p0, @p1, @p2);
+SELECT "id"
+FROM "etudiants"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2022-03-08 21:58:01.444 +01:00 [INF] Executed handler method OnGet, returned result .
+2022-03-08 21:58:01.449 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2022-03-08 21:58:01.450 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2022-03-08 21:58:01.597 +01:00 [INF] Executed page /Index in 800.9225ms
+2022-03-08 21:58:01.600 +01:00 [INF] Executed endpoint '/Index'
+2022-03-08 21:58:01.616 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44386/ - - - 200 - text/html;+charset=utf-8 940.7955ms
+2022-03-08 21:58:11.717 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44386/api/Etudiant - -
+2022-03-08 21:58:11.724 +01:00 [INF] Executing endpoint 'WebApplication1.Controlers.controllerEtudiant.GetEtudiants (WebApplication1)'
+2022-03-08 21:58:11.732 +01:00 [INF] Route matched with {action = "GetEtudiants", controller = "controllerEtudiant", page = ""}. Executing controller action with signature System.Collections.Generic.List`1[WebApplication1.MODELS.Etudiant] GetEtudiants() on controller WebApplication1.Controlers.controllerEtudiant (WebApplication1).
+2022-03-08 21:58:11.736 +01:00 [INF] les information
+2022-03-08 21:58:11.770 +01:00 [INF] Entity Framework Core 5.0.14 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2022-03-08 21:58:11.946 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "e"."id", "e"."age", "e"."nom", "e"."prenom"
+FROM "etudiants" AS "e"
+2022-03-08 21:58:11.960 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApplication1.MODELS.Etudiant, WebApplication1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-08 21:58:11.998 +01:00 [INF] Executed action WebApplication1.Controlers.controllerEtudiant.GetEtudiants (WebApplication1) in 265.2372ms
+2022-03-08 21:58:11.998 +01:00 [INF] Executed endpoint 'WebApplication1.Controlers.controllerEtudiant.GetEtudiants (WebApplication1)'
+2022-03-08 21:58:11.999 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44386/api/Etudiant - - - 200 - application/json;+charset=utf-8 282.6896ms
+2022-03-08 21:59:56.997 +01:00 [INF] Entity Framework Core 5.0.14 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2022-03-08 21:59:57.224 +01:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-03-08 21:59:57.311 +01:00 [INF] User profile is available. Using 'C:\Users\ElMehdi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-03-08 21:59:57.567 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-08 21:59:57.567 +01:00 [INF] Hosting environment: Development
+2022-03-08 21:59:57.567 +01:00 [INF] Content root path: C:\Users\ElMehdi\source\repos\WebApplication1
+2022-03-08 21:59:57.608 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44386/ - -
+2022-03-08 21:59:57.674 +01:00 [INF] Executing endpoint '/Index'
+2022-03-08 21:59:57.737 +01:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2022-03-08 21:59:57.748 +01:00 [INF] Executing handler method WebApplication1.Pages.IndexModel.OnGet - ModelState is "Valid"
+2022-03-08 21:59:57.749 +01:00 [INF] Executed handler method OnGet, returned result .
+2022-03-08 21:59:57.756 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2022-03-08 21:59:57.756 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2022-03-08 21:59:57.896 +01:00 [INF] Executed page /Index in 151.9051ms
+2022-03-08 21:59:57.898 +01:00 [INF] Executed endpoint '/Index'
+2022-03-08 21:59:57.916 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44386/ - - - 200 - text/html;+charset=utf-8 309.8817ms
+2022-03-08 22:00:04.258 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44386/api/Etudiant - -
+2022-03-08 22:00:04.262 +01:00 [INF] Executing endpoint 'WebApplication1.Controlers.controllerEtudiant.GetEtudiants (WebApplication1)'
+2022-03-08 22:00:04.272 +01:00 [INF] Route matched with {action = "GetEtudiants", controller = "controllerEtudiant", page = ""}. Executing controller action with signature System.Collections.Generic.List`1[WebApplication1.MODELS.Etudiant] GetEtudiants() on controller WebApplication1.Controlers.controllerEtudiant (WebApplication1).
+2022-03-08 22:00:04.276 +01:00 [INF] les information
+2022-03-08 22:00:04.280 +01:00 [INF] Entity Framework Core 5.0.14 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2022-03-08 22:00:04.501 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "e"."id", "e"."age", "e"."nom", "e"."prenom"
+FROM "etudiants" AS "e"
+2022-03-08 22:00:04.589 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApplication1.MODELS.Etudiant, WebApplication1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-08 22:00:04.622 +01:00 [INF] Executed action WebApplication1.Controlers.controllerEtudiant.GetEtudiants (WebApplication1) in 349.2758ms
+2022-03-08 22:00:04.623 +01:00 [INF] Executed endpoint 'WebApplication1.Controlers.controllerEtudiant.GetEtudiants (WebApplication1)'
+2022-03-08 22:00:04.627 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44386/api/Etudiant - - - 200 - application/json;+charset=utf-8 368.6682ms
